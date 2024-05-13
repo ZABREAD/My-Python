@@ -1,0 +1,8 @@
+Algeria/Algiers
+Canada/Ottowa
+China/Beijing
+aiwan/Taipei
+Ukraine/Kyiv
+USA/WashingtonDC
+USA/
+USA/WashingtonDC

@@ -1,0 +1,103 @@
+def check_guess(guess, answer):
+    global score
+    still_guessing = True
+    attempt = 0
+    while still_guessing and attempt < 2:
+        if guess.lower() == answer.lower():
+            print('Your answer is correct!')
+            score = score + 1
+            print('Your score is: %s \n' % score)
+            still_guessing = False
+        else:
+            if attempt < 1:
+                guess = input('Sorry wrong answer. Try again: ')
+            attempt = attempt + 1
+    if attempt == 2:
+        print('The correct answer is ' +answer)
+        
+
+score = 0
+
+print('Welcome to my random fact quiz!')
+print('Are you ready for some random information? Here we go!\n')
+
+#from Mr. Nelson
+guess1 = input('What is the name of the original Spiderman?\n')
+check_guess(guess1, 'Peter Parker')
+#from Mr. Nelson
+guess2 = input('What is the suicide and crisis lifeline number?\n')
+check_guess(guess2, '988')
+
+#https://www.mentimeter.com/blog/audience-energizers/55-free-trivia-and-fun-quiz-question-templates
+guess3 = input('How many dots appear on a pair of dice?\n')
+check_guess(guess3, '42')
+
+#https://htschool.hindustantimes.com/editorsdesk/knowledge-vine/africa-the-only-continent-that-touches-upon-all-four-hemispheres
+guess4 = input('What is the only continent with land in all four hemispheres?\n')
+check_guess(guess4, 'Africa')
+
+guess5 = input ('Which Disney movie has had the most sequels?\n')
+check_guess(guess5, 'Toy Story')
+#https://en.wikipedia.org/wiki/Mickey_Mouse?scrlybrkr=f3db633f#:~:text=Mickey%20Mouse%20is%20an%20American,yellow%20shoes%2C%20and%20white%20gloves.
+guess6 = input ('What color are Mickey Mouse\'s shoes?\n')
+check_guess(guess6, 'Yellow')
+
+guess7 = input ('How many Academy Awards for Best Original Song\' has Disney won?\n')
+check_guess(guess7, '14')
+
+#https://parade.com/944584/parade/trivia-questions-for-kids/
+
+guess8 = input ('What is the name of the toy cowboy in Toy Story?\n')
+check_guess(guess8, 'Woody')
+
+guess9 = input ('What is something you hit with a hammer?\n')
+check_guess(guess9, 'A nail')
+
+guess10 = input ('Whose nose grew longer every time he lied?\n')
+check_guess(guess10, 'Pinocchio')
+
+guess11 = input ('What is the name of the fairy in Peter Pan?\n')
+check_guess(guess11, 'Tinkerbell')
+
+#https://www.buzzfeed.com/kellyrissman/best-trivia-questions?scrlybrkr=f3db633f
+guess12 = input ('If you freeze water, what do you get?\n')
+check_guess(guess12, 'Ice')
+
+#https://www.buzzfeed.com/kellyrissman/best-trivia-questions?scrlybrkr=f3db633f
+guess13 = input ('What is the name of the scale used to measure spiciness of peppers?\n')
+check_guess(guess13, 'Scovile scale')
+
+#https://www.buzzfeed.com/kellyrissman/best-trivia-questions?scrlybrkr=f3db633f
+guess14 = input ('Pickles start out as which vegetable?\n')
+check_guess(guess14, 'cucumber')
+
+#https://www.buzzfeed.com/kellyrissman/best-trivia-questions?scrlybrkr=f3db633f
+guess15 = input ('How many bones do sharks have?\n')
+check_guess(guess15, '0')
+
+
+print('Congratulayions, you survived the quiz!')
+print('Your final score is: %s ')
+percent = (score / 15) * 100
+percent = round(percent, 2)
+percent = str(percent)
+print('You get a ' + percent + '%')
+
+percent = float(percent)
+
+if percent >= 90 and percent <= 100:
+    print ('Your grade is an A!')
+elif percent >= 80 and percent <= 89:
+    print ('Your grade is an B!')
+elif percent >= 70 and percent <= 79:
+    print('Your gradde us ab C')
+elif percent >= 60 and percent <= 69:
+    print('Yourgrade is an D...')
+else:
+    print('You failed..........')
+
+
+
+
+
+
